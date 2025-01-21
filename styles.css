@@ -1,20 +1,82 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 
 }
+body {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    color: green;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 80px;
+    font-size: 20px;
+    /* margin-bottom: 20px; */
+}
 .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 7px;
     width: 606px;
     height: 606px;
-    display: flex;
-    flex-wrap: wrap;
+    margin: auto;
 }
 .square{
     border: 1px solid black;
     height: 200px;
-    width: 200px;
+    width: 200px; 
+}
+.square:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .mole{
     background-image: url("mole.jpg");
     background-size: cover;
+}
+.bonus-mole {
+    background-image: url("bonus-mole.png");
+    background-size: cover;
+}
+
+#hard-mode {
+    padding: 10px 20px;
+    font-size: 16px;
    
+    /* color: white; */
+    border: none;
+    cursor: pointer;
+}
+
+/* #hard-mode:hover {
+    background-color: #45a049;
+} */
+ 
+
+
+/* CSS */
+#hard-mode{
+  background: #FF4742;
+  /* border: 1px solid #FF4742; */
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+#hard-mode:hover,
+#hard-mode:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+#hard-mode:active {
+  opacity: .5;
 }
